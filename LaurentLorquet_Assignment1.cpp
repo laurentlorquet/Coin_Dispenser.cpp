@@ -11,10 +11,12 @@ int main(){
 
 // integers (q) represents quarters, (c) for cents, (d) for dimes, (n) for nickels, (p) for pennies
 // cash represents total value in dollars and cents
-float cash, q, c, d, n, p;
+double cash;
+int q, c, d, n, p;
 cout << "Please enter the value in dollars and cents (x.xx): $ \n";
 cin >> cash;
 
+if (cash > 0){
 // Total cash into cents
 c = cash * 100;
 
@@ -29,6 +31,11 @@ c = c % 10;
 // Lastly comes nicles followed by remaining pennies (p)
 n = c / 5;
 p = c % 5;
+}
+else {
+    cout << "Cash can't be less than 0";
+    return 0;
+}
 
 // Displaying the original dollar amount along with coin designations and their respective number
 cout << "Your change is the following: \n";
