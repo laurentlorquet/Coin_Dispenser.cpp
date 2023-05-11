@@ -20,15 +20,15 @@ c = cash * 100;
 
 // First larger coin, quarters (q) followed by remaining cents (c)
 q = c / 25;
-c = c% 25;
+c = c % 25;
 
 // Second is dimes (d) followed by remaining cents (c)
 d = c / 10;
-c = c% 10;
+c = c % 10;
 
 // Lastly comes nicles followed by remaining pennies (p)
 n = c / 5;
-p = c% 5;
+p = c % 5;
 
 // Displaying the original dollar amount along with coin designations and their respective number
 cout << "Your change is the following: \n";
